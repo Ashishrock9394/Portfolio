@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Portfolio-Ashish Kumar</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- header design -->
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- home section design  -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello It's Me</h3>          
+            <h1>Ashish Kumar</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>            
+            <div class="social-media">
+                <a href="https://github.com/Ashishrock9394"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/ashishrock9394/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://twitter.com/AshishRock9394"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.facebook.com/ashishrock9394/"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+            <a href="#about" class="btn">More About Me</a>
+            <a href="images/Ashish_Kumar_Resume.pdf" class="btn" download>Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="images/img1.png" alt="">
+        </div>
+    </section>
+
+    <!-- about section  -->
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-container">
+        <div class="about-img">
+            <img src="images/img1.png" alt="">
+        </div>
+        <div class="about-content">
+            <h3>Who am <span>I?</span></h3>
+            <p style="text-indent: 2em;"> Hi, I’m Ashish Kumar, a passionate and detail-oriented Software Developer with a strong foundation in PHP, database design, and back-end technologies. I’m actively seeking a challenging and dynamic role where I can apply my programming skills to build scalable, efficient, and innovative web solutions. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; With a deep interest in web development, I strive to contribute to impactful projects that solve real-world problems and drive organizational success. My goal is to be part of a forward-thinking team where I can continuously learn, grow, and deliver high-quality software that makes a difference.
+            </p>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+        </div>
+    </section>
+
+    <!-- projects section design -->
+    <section class="projects" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="projects-container">
+            <div class="projects-box">
+                <img src="images/lecture.png" alt="">
+                <div class="projects-layer">
+                    <h4>Lecture Tracker</h4>
+                    <p>A full-stack web application that tracks how much of a lecture video a user has watched</p>
+                    <a href="https://github.com/Ashishrock9394/Tutedude" target="_blank"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+            <div class="projects-box">
+                <img src="images/shayrana.png" alt="">
+                <div class="projects-layer">
+                    <h4>Shayrana</h4>
+                    <p>A Blog application with all the CRUD operations</p>
+                    <a href="https://github.com/Ashishrock9394/Shayrana" target="_blank"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+            <div class="projects-box">
+                <img src="images/carrental.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Car Rental</h4>
+                    <p>A Car Rental Website using HTML, CSS, Javascript and PHP</p>
+                    <a href="https://github.com/Ashishrock9394/Car_Rental" target="_blank"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+            <div class="projects-box">
+                <img src="images/colorgame.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Color Game</h4>
+                    <p>A color matching game with the given RGB values.</p>
+                    <a href="https://ashishrock9394.github.io/Color-Game/"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+            <div class="projects-box">
+                <img src="images/webone.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Sparks Enterprises</h4>
+                    <p>A Bakery and Restorant website using Node.js and MongoDB</p>
+                    <a href="https://github.com/Ashishrock9394/Web_One"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- skills secvtion  -->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>skills</span></h2>
+        <div class="skills-container">
+
+            <div class="skills-box">
+            <i class='bx bxs-paint'></i>
+            <h3>Laravel Developer</h3>
+            <p class="skill-summary" data-fulltext="Hands-on experience in building scalable web applications using features like routing, middleware, Eloquent ORM, and RESTful APIs. I'm well-versed in Laravel Jetstream, authentication systems, and using Artisan CLI for streamlined development.">
+                <!-- Will be populated by JS -->
+            </p>
+            <a href="javascript:void(0)" class="btn" onclick="openModal(this)">Read More</a>
+            </div>
+
+            <div class="skills-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Development</h3>
+            <p class="skill-summary" data-fulltext="I focus on creating responsive and accessible interfaces using HTML, CSS, JavaScript, and Vue.js. I ensure performance optimization, cross-browser compatibility, and a smooth user experience across devices.">
+            </p>
+            <a href="javascript:void(0)" class="btn" onclick="openModal(this)">Read More</a>
+            </div>
+
+            <div class="skills-box">
+            <i class='bx bxs-data'></i>
+            <h3>Database Management</h3>
+            <p class="skill-summary" data-fulltext="I have a solid understanding of relational databases such as MySQL and MongoDB. I’m proficient in writing optimized SQL queries, managing migrations, and designing normalized database schemas for efficient data storage and retrieval.">
+            </p>
+            <a href="javascript:void(0)" class="btn" onclick="openModal(this)">Read More</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Contact form -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in <span>Touch</span></h3>
+                <p>Feel free to reach out for freelance work, collaboration, or just to say hello!</p>
+                <ul>
+                    <li><i class='bx bx-envelope'></i> ashishkumar9394@gmail.com</li>
+                    <li><i class='bx bx-phone'></i> +91 8181080712</li>
+                    <li><i class='bx bx-map'></i> Noida (Uttar Pradesh), India</li>
+                </ul>
+                <div class="social-media" style="margin-left: 20px;">
+                    <a href="https://github.com/Ashishrock9394"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/ashishrock9394/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://twitter.com/AshishRock9394"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.facebook.com/ashishrock9394/"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+            </div>
+
+            <form id="contact-form">
+                <div class="input-box">
+                <input id="name" type="text" placeholder="Full Name" required />
+                <input id="email" type="email" placeholder="Email Address" required />
+                </div>
+                <div class="input-box">
+                <input id="number" type="number" placeholder="Contact Number" />
+                <input id="subject" type="text" placeholder="Email Subject" />
+                </div>
+                <textarea
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Your Message"
+                required
+                ></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer design  -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Made with <i class="bx bxs-heart" style="color:red"></i> by Ashish Kumar</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-text"></p>
+    </div>
+    </div>
+
+
+    <!-- scroll reversal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- script file -->
+
+    <script src="js/script.js"></script>
+
+    <!-- send email -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Collect form values
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let number = document.getElementById("number").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    // Format message body
+    let body = `
+      <b>Name:</b> ${name}<br/>
+      <b>Email:</b> ${email}<br/>
+      <b>Contact Number:</b> ${number}<br/>
+      <b>Subject:</b> ${subject}<br/>
+      <b>Message:</b><br/> ${message}
+    `;
+
+    // Send email
+    Email.send({
+      SecureToken: "fa75dd5a-949c-4c85-84d0-199bed0b1bfa",
+      To: "akumaralp@gmail.com",
+      From: "akumaralp@gmail.com",
+      Subject: "New Portfolio Contact Form Message",
+      Body: body,
+    }).then(
+      (response) => {
+        alert("✅ Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      },
+      (error) => {
+        alert("❌ Failed to send message: " + error);
+      }
+    );
+  });
+</script>
+</body>
+
+</html>
