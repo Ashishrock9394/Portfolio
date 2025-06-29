@@ -35,11 +35,11 @@
             <h1>Ashish Kumar</h1>
             <h3>And I'm a <span class="multiple-text"></span></h3>            
             <div class="social-media">
-                <a href="https://github.com/Ashishrock9394"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/ashishrock9394/"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://twitter.com/AshishRock9394"><i class='bx bxl-twitter'></i></a>
-                <a href="https://www.facebook.com/ashishrock9394/"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://github.com/Ashishrock9394" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/ashishrock9394/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://twitter.com/AshishRock9394" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.facebook.com/ashishrock9394/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/ashishrock9394/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
             </div>
             <a href="#about" class="btn">More About Me</a>
             <a href="images/Ashish_Kumar_Resume.pdf" class="btn" download>Download CV</a>
@@ -174,11 +174,11 @@
                     <li><i class='bx bx-map'></i> Noida (Uttar Pradesh), India</li>
                 </ul>
                 <div class="social-media" style="margin-left: 20px;">
-                    <a href="https://github.com/Ashishrock9394"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.linkedin.com/in/ashishrock9394/"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://twitter.com/AshishRock9394"><i class='bx bxl-twitter'></i></a>
-                    <a href="https://www.facebook.com/ashishrock9394/"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://github.com/Ashishrock9394" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/ashishrock9394/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://twitter.com/AshishRock9394" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.facebook.com/ashishrock9394/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/ashishrock9394/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
                 </div>
             </div>
 
@@ -228,6 +228,10 @@
     <!-- scroll reversal  -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
     <!-- typed js -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
@@ -240,41 +244,55 @@
 
 <script>
   document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Collect form values
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let number = document.getElementById("number").value;
-    let subject = document.getElementById("subject").value;
-    let message = document.getElementById("message").value;
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let number = document.getElementById("number").value.trim();
+  let subject = document.getElementById("subject").value.trim();
+  let message = document.getElementById("message").value.trim();
 
-    // Format message body
-    let body = `
-      <b>Name:</b> ${name}<br/>
-      <b>Email:</b> ${email}<br/>
-      <b>Contact Number:</b> ${number}<br/>
-      <b>Subject:</b> ${subject}<br/>
-      <b>Message:</b><br/> ${message}
-    `;
+  if (!name || !email || !message) {
+    Swal.fire({
+      icon: "warning",
+      title: "Incomplete Form",
+      text: "Please fill out Name, Email, and Message fields.",
+    });
+    return;
+  }
 
-    // Send email
-    Email.send({
-      SecureToken: "fa75dd5a-949c-4c85-84d0-199bed0b1bfa",
-      To: "akumaralp@gmail.com",
-      From: "akumaralp@gmail.com",
-      Subject: "New Portfolio Contact Form Message",
-      Body: body,
-    }).then(
-      (response) => {
-        alert("✅ Message sent successfully!");
-        document.getElementById("contact-form").reset();
-      },
-      (error) => {
-        alert("❌ Failed to send message: " + error);
-      }
-    );
-  });
+  let body = `
+    <b>Name:</b> ${name}<br/>
+    <b>Email:</b> ${email}<br/>
+    <b>Contact Number:</b> ${number}<br/>
+    <b>Subject:</b> ${subject}<br/>
+    <b>Message:</b><br/> ${message}
+  `;
+
+  Email.send({
+    SecureToken: "567a9802-5a0f-4978-b6ad-0d81876bf5ab",
+    To: "ashishkumar9394@gmail.com",
+    From: "ashishkumar9394@gmail.com",
+    Subject: "New Portfolio Contact Form Message",
+    Body: body,
+  }).then(
+    () => {
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent!",
+        text: "✅ Your message was sent successfully.",
+      });
+      document.getElementById("contact-form").reset();
+    },
+    (error) => {
+      Swal.fire({
+        icon: "error",
+        title: "Failed to Send",
+        text: "❌ Something went wrong: " + error,
+      });
+    }
+  );
+});
 </script>
 </body>
 
